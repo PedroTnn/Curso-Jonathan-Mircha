@@ -1,5 +1,5 @@
-/*
 
+/*
 ///Problema 1
 function Calcular(string,x){
 string = "Caca de mono";
@@ -58,8 +58,8 @@ Repetir()
  pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  
    "1, 2, 3, 4 y 5.
 
- 
-
+ */
+/*
    const saludo = function() {
        console.log("Hola")
    }
@@ -90,7 +90,6 @@ Repetir()
 //Solución
 const textoCadena = (cadena = "",texto = "") => {
   if(!cadena)return console.warn("No ingresaste un texto largo");
-
   if(!texto)return console.warn("No ingresaste la palabra a evaluar");
 let i = 0,
 contador = 0;
@@ -201,12 +200,12 @@ factorial(10);
   
  /* 12) Programa una función que determine si un número es primo (aquel que solo es 
      divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
-    */  
+      
      const primo =(numero = undefined)=>{
      if(numero === undefined)return console.error('No ingresaste nada')
       if(typeof numero !== 'number') return console.warn("El caracter tiene que ser un numero")
       if(Math.sign(numero)=== -1)return console.warn('El numero tiene que ser positivo')
-      
+    
       let divisible = false;
       for(let i = 2;i < numero;i++){
         if((numero %i)== 0){   2.5
@@ -251,7 +250,7 @@ factorial(10);
 
 /*
 Versión Mircha
-*/
+
 const Par1 =(numero = undefined)=>{
   if(typeof numero !== 'number')return console.warn('EL valor tiene que ser un numero');
    if(numero === 0) return console.error('El numero no puede ser 0');
@@ -276,7 +275,7 @@ Par1(10)
 
 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
   
-  */ 
+  
  const Convertidor =(numero = 0)=>{
 if(typeof numero !== 'number')return console.warn('EL valor tiene que ser un numero');
 //if(numero === 0) return console.error('El numero no puede ser 0');//
@@ -339,3 +338,67 @@ switch (3) {
  }
 
  Grados(0,"F")
+
+ */
+/*
+ const contarLetras = (cadena = "")=>{
+  if (!cadena)return console.warn("No ingresaste una cadena de texto");
+  if(typeof cadena !== "string")return console.log(`El valor ${cadena} no es una cadena de texto`);
+  
+  let vocales = 0,
+  consonantes = 0;
+  cadena = cadena.toLocaleLowerCase();
+  for(let letra of cadena){
+    if(/[aeiouáéíóú]/.test(letra)){
+    vocales++;
+  }
+    if(/[qwrtypsdfghjklñzxcvnbm]/.test(letra)){
+      consonantes++;
+    }
+  }
+  return console.info({
+    cadena,
+    vocales,
+    consonantes,
+  })
+ }
+ contarLetras("Hola Mundo");
+ contarLetras("ñoño")
+ contarLetras("lorem")
+*/
+/*
+const validarNombre =(nombre = "") =>{
+  if (!nombre)return console.warn("No ingresaste una cadena de texto");
+  if(typeof nombre !== "string")return console.log(`El valor ${nombre} no es una cadena de texto`);
+  let expReg = /^[A-Za-zÑñ\s]+$/g.test(nombre);
+  return (expReg)
+  ?console.warn(`${nombre}, es un nombre valido`)
+  :console.warn(`${nombre}, No es un nombre valido`);
+}
+validarNombre();
+validarNombre(3);
+validarNombre("Pedro Telón");
+*/
+const validarcorreo =(correo = "")=>{
+  if (!correo)return console.warn("No ingresaste una cadena de texto");
+  if(typeof correo !== "string")return console.log(`El valor ${nombre} no es una cadena de texto`);
+ // let expReg = /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i.test(correo);
+  let expReg = /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/.test(correo);
+  return (expReg)
+  ?console.info(`${correo}, es un corre valido`)
+  :console.error(`${correo}, Es un correo invalido`);
+}
+validarcorreo();
+validarcorreo();
+validarcorreo("jon´mic,cha@gmail")
+validarcorreo("hola");
+validarcorreo("ArvoreGroup@gmail.shop")
+
+const fusion =(correo = "")=>{
+  if (!correo)return console.warn("No ingresaste una cadena de texto");
+  if(typeof correo !== "string")return console.log(`El valor ${nombre} no es una cadena de texto`);
+  let expReg =/^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/.test(correo);
+  return (expReg)
+  ?console.warn(`${correo}, es un corre valido`)
+  :console.warn(`${correo}, Es un correo invalido`);
+}
