@@ -378,7 +378,7 @@ const validarNombre =(nombre = "") =>{
 validarNombre();
 validarNombre(3);
 validarNombre("Pedro Telón");
-*/
+
 const validarcorreo =(correo = "")=>{
   if (!correo)return console.warn("No ingresaste una cadena de texto");
   if(typeof correo !== "string")return console.log(`El valor ${nombre} no es una cadena de texto`);
@@ -401,4 +401,98 @@ const fusion =(correo = "")=>{
   return (expReg)
   ?console.warn(`${correo}, es un corre valido`)
   :console.warn(`${correo}, Es un correo invalido`);
+}
+
+const devolverCuadrados = (arr=undefined)=>{
+  if (arr === undefined)return console.warn("No ingresaste un arreglo de numeros");
+
+  if(!(arr instanceof Array))return console.error("El valor que ingresaste no es un arreglo");
+
+  if(arr.length === 0)return console.error("El arreglo está vacio");
+
+  for (let num  of arr) {
+    if(typeof num !== "number")return console.error(`El valor ${num} no es un numero`);
+  }
+    const newArr = arr.map(a => a * a);
+    return console.info(`Arreglo original ${arr}\nArreglo elevado al cuadrado ${newArr}`)
+
+}
+devolverCuadrados([1,4,8,]);
+
+const arrayMInMax = (arr = undefined)=>{
+  if (arr === undefined)return console.warn("No ingresaste un arreglo de numeros");
+
+  if(!(arr instanceof Array))return console.error("El valor que ingresaste no es un arreglo");
+
+  if(arr.length === 0)return console.error("El arreglo está vacio");
+
+  for (let num  of arr) {
+    if(typeof num !== "number")return console.error(`El valor ${num} no es un numero`);
+  }
+return console.info(`Arreglo Original ${arr}\nValor Mayor ºº${Math.max(...arr)}\nValor Menor ${Math.min(...arr)}`)
+}
+
+arrayMInMax()
+arrayMInMax([4,5,10,40])
+
+const separar = (arr=undefined)=>{
+  if (arr === undefined)return console.warn("No ingresaste un arreglo de numeros");
+
+  if(!(arr instanceof Array))return console.error("El valor que ingresaste no es un arreglo");
+
+  if(arr.length === 0)return console.error("El arreglo está vacio");
+
+  for (let num  of arr) {
+    if(typeof num !== "number")return console.error(`El valor ${num} no es un numero`);
+  }
+  return console.info({
+    pares:arr.filter(num => num %2 ===0),
+    impares:arr.filter(num => num%2 ===1)
+  })
+}
+
+separar([5,10,20])
+*/
+const ordenarArreglo = (arr=undefined)=>{
+  if (arr === undefined)return console.warn("No ingresaste un arreglo de numeros");
+
+  if(!(arr instanceof Array))return console.error("El valor que ingresaste no es un arreglo");
+
+  if(arr.length === 0)return console.error("El arreglo está vacio");
+
+  for (let num  of arr) {
+    if(typeof num !== "number")return console.error(`El valor ${num} no es un numero`);
+  }
+
+  return console.info({
+    arreglo:arr,
+    asc:arr.map(el=> el).sort(),
+    des:arr.map(el=>el).sort().reverse()
+  })
+
+  
+
+}
+
+//ordenarArreglo();
+//ordenarArreglo([]);
+//ordenarArreglo([5,5,5])
+
+const quitar =(arr=undefined)=>{
+  if (arr === undefined)return console.warn("No ingresaste un arreglo de numeros");
+
+  if(!(arr instanceof Array))return console.error("El valor que ingresaste no es un arreglo");
+
+  if(arr.length === 0)return console.error("El arreglo está vacio");
+
+  for (let num  of arr) {
+    if(typeof num !== "number")return console.error(`El valor ${num} no es un numero`);
+  }
+
+  return console.info({
+    original:arr,
+    sinDuplicados:arr.filter((value,index,self)=>self.indexOf(value) ===index)
+
+  })
+    
 }
