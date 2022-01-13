@@ -1,4 +1,4 @@
-setTimeout(() => {
+/*setTimeout(() => {
     console.log("Ejecutando")
 }, 1000);
 
@@ -13,7 +13,28 @@ let tempo = setTimeout(() => {
 clearTimeout(tempo);
 clearInterval(int);
 
+//Codigo sincrono bloqueante
+(()=>{
+console.log("Hola mundo");
 
+function dos(){
+    console.log("2")
+}
+
+function uno(){
+    console.log("Uno");
+    dos();
+    console.log("Tres");
+}
+uno();
+console.log("Adios")
+})();
+
+
+
+//Codigo asincrono  no bloqueante
 (()=>{
 
-})()
+})();
+
+*/
