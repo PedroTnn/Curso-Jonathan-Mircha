@@ -452,7 +452,7 @@ const separar = (arr=undefined)=>{
 }
 
 separar([5,10,20])
-*/
+
 const ordenarArreglo = (arr=undefined)=>{
   if (arr === undefined)return console.warn("No ingresaste un arreglo de numeros");
 
@@ -496,3 +496,4 @@ const quitar =(arr=undefined)=>{
   })
     
 }
+*/
