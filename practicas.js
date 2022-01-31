@@ -842,7 +842,7 @@ const otraPersona = {
 }
 
 otraPersona.saludar();
-*/
+
 
 const persona = {
   cadena: "Pedro",
@@ -855,3 +855,4 @@ console.log(JSON.parse("{}"));
 console.log(JSON.parse("true"));
 console.log(JSON.stringify("Hola"));
 console.log(JSON.stringify(persona));
+*/
