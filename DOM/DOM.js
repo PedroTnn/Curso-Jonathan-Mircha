@@ -347,10 +347,11 @@ $btnImprimir.addEventListener("click",e=>{
 window.print();
 
 });
-*/
+
 
 console.log("**************Objeto URL**************");
 console.log(location);
 console.log(history);
 console.log(history.length);
 console.log(navigator);
+*/
