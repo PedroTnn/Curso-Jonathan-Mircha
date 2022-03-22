@@ -248,25 +248,109 @@ const Remover=(e)=>{
 $removin.addEventListener("click",Remover);
 
 
-*/
+
 
 const $divs = document.querySelectorAll(".eventos div"),
 $linkEvents = document.querySelector(".eventos a");
-console.log($divs);
 
 function flujoEvents(e){
-   console.log(`Hola te saluda ${this.className},
+   console.log(`Hola te saluda ${this},
     el click lo origino ${e.target.className}`);
-    e.stopPropagation();
+    
 }
+
+document.addEventListener("click",(e)=>{
+    console.log("Click en", e.target);
+
+  /*  if(e.target.matches(".eventos a")){
+        flujoEvents(e);
+    };
+
+    if(e.target.matches(".eventos div")){
+        flujoEvents(e);
+    };
+
+    if(e.target.matches(".eventos a")){
+        alert("Peligro su computadora se llena de virus");
+        e.preventDefault();
+      //  e.stopPropagation();
+    };
+});
+*/
+//console.log(document);
+
+/*
 $divs.forEach(div =>{
    div.addEventListener("click",flujoEvents);
-    //Fase de captura
+    //Fase de captura y tambiens se puede pasar un objeto
     //=false
     }); 
-
+/*
 $linkEvents.addEventListener("click",(e)=>{
  alert("Peligro su computadora se llena de virus")
  e.preventDefault();
  e.stopPropagation();
 });
+
+
+
+
+window.addEventListener("resize",(e)=>{
+    console.clear();
+    console.log(window.innerWidth);
+    console.log(window.innerHeight);
+    console.log(window.outerWidth);
+    console.log(window.outerHeight);
+    
+    console.log(e);
+});
+
+window.addEventListener("scroll", e=>{
+//console.clear();
+console.log(window.scrollY,window.scrollX); 
+console.log(e);
+
+});
+window.addEventListener("load",(e)=>{
+   // console.clear();
+    console.log(window.scrollY,window.scrollX); 
+    console.log(e);
+})
+
+window.addEventListener("DOMContentLoaded",(e)=>{
+    console.log("Otro")
+//console.clear();
+console.log(window.scrollY,window.scrollX); 
+console.log(e);
+})
+
+window.alert("Confirmación");
+window.confirm("Confirmación");
+window.prompt("Hola");
+
+
+const $btnAbrir = document.getElementById("abrir"),
+$btnCerrar = document.getElementById("cerrar"),
+$btnImprimir = document.getElementById("imprimir");
+let ventana;
+
+
+$btnAbrir.addEventListener("click",e=>{
+  ventana = window.open("https://agar.io");
+});
+$btnCerrar.addEventListener("click",e=>{
+  //  window.close();
+  ventana.close();
+});
+$btnImprimir.addEventListener("click",e=>{
+
+window.print();
+
+});
+*/
+
+console.log("**************Objeto URL**************");
+console.log(location);
+console.log(history);
+console.log(history.length);
+console.log(navigator);
