@@ -6,6 +6,8 @@
     background-color: #ffff00;
     width: 100%;
     text-align: center;
-    height: 50px;
+    height: 40px;
+    padding: 10px;
+    border: 0.1px solid black;
 }
 
