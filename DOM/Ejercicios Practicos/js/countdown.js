@@ -13,7 +13,7 @@ let countdownTemp = setInterval(() => {
 
 
     $countdown.innerHTML=`<h3>Faltan: ${days} dias ${hours} horas ${minutes} minutos ${seconds} segundos <h3>`
-   console.log(countdownDate,now,limitTime); 
+    
    if(limitTime < 0){
        clearInterval(countdownTemp);
        $countdown.innerHTML=`<h3>${finalMessage}<h3>`
