@@ -186,7 +186,12 @@ img {
     border: 0;
     transition: all 0.3s ease-out;
 }
-.scroll-top-btn:hover{
+.dark-theme-btn:hover{
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
+.dark-mode{
     background-color: var(--second-color);
     color: var(--main-color);
 }

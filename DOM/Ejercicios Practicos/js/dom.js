@@ -3,6 +3,7 @@ import {digitalClock,alarm} from "../js/reloj.js";
 import {moveBall,shortcurts }  from "./keyboard.js";
 import countdown from "./countdown.js";
 import scrollTopButtom from "./bottom_scroll.js";
+import darkTheme from "./dark-theme.js";
 const d = document;
 d.addEventListener("DOMContentLoaded",(e)=>{
     hamburgerMenu(".panel-btn",".panel",".menu a");
@@ -15,9 +16,11 @@ d.addEventListener("DOMContentLoaded",(e)=>{
      scrollTopButtom(
          ".scroll-top-btn"
      );
+    
 });
 
 d.addEventListener("keydown", e=>{
     shortcurts(e);
     moveBall(e,".ball",".stage");
 })
+darkTheme(".dark-theme-btn","dark-mode");

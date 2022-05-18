@@ -8,9 +8,9 @@ const $ball = d.querySelector(ball),
 $stage = d.querySelector(stage),
 limitsBall = $ball.getBoundingClientRect(),
 limitsStage = $stage.getBoundingClientRect();
-console.log(e.keyCode);
+/*console.log(e.keyCode);
 console.log(e.key);
-console.log(limitsBall,limitsStage);
+console.log(limitsBall,limitsStage);*/
 //*const move = (direction)=>{
   
 //}
