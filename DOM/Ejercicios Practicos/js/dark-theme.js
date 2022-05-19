@@ -3,7 +3,7 @@ const ls = localStorage;
 export default function darkTheme(btn, classDark){
 const $themeBtn = d.querySelector(btn),
 $selectors = d.querySelectorAll("[data-dark]");
-console.log($selectors);
+//console.log($selectors);
 let moon = "🌚",
 sun = "🌞";
 
@@ -24,15 +24,15 @@ d.addEventListener("click",(e) =>{
      //   console.log($themeBtn.textContent);
     if($themeBtn.textContent === moon){
         darkMode();
-        console.log(ls.getItem("theme"))
+      //  console.log(ls.getItem("theme"))
     }else{
         lightMode(); 
-        console.log(ls.getItem("theme"))       
+     //   console.log(ls.getItem("theme"))       
     }
 }
 });
 d.addEventListener("DOMContentLoaded", e=>{
-    console.log("Estamos en",ls.getItem("theme"),"mode")
+//    console.log("Estamos en",ls.getItem("theme"),"mode")
     if(ls.getItem("theme")===null) ls.setItem("theme","light");
 
     if(ls.getItem("theme")==="light") lightMode();
