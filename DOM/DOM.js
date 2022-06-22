@@ -16,8 +16,22 @@ console.log(document.querySelector("#menu"));
 //tambien se le pueden pasar parametros
 console.log(document.querySelectorAll(".card")[2] );
 //document.querySelectorAll(".card").forEach(el => console.log(el))*/
+//CLASE 62
+console.log(document.getElementsByTagName("li"))
+console.log(document.querySelector("#menu"))
+console.log(document.querySelectorAll("a")[2]);
+//CLASE 63
+console.log(document.documentElement.lang)
+document.documentElement.setAttribute("lang","VIVA ESPAÑAAA")
+console.log(document.documentElement.getAttribute("lang"))
 
-document.documentElement.setAttribute("lang","Pendejo")
+
+
+
+
+
+
+document.documentElement.setAttribute("lang","ENG")
 const $linkDOM = document.querySelector(".link-dom")
 $linkDOM.setAttribute("target","_blank");
 $linkDOM.setAttribute("rel","noopener");
@@ -28,3 +42,5 @@ console.log($linkDOM.hasAttribute("rel"))
 
 console.log($linkDOM.getAttribute("data-description"))
 console.log($linkDOM.dataset)
+const d = document
+console.log(d.querySelector("#menu"));
