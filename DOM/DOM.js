@@ -44,3 +44,20 @@ console.log($linkDOM.getAttribute("data-description"))
 console.log($linkDOM.dataset)
 const d = document
 console.log(d.querySelector("#menu"));
+
+Inicio
+    Public insertarAlFinal(nodo liga,Entero valor)
+Inicio
+    (Esta operacion requiere minimo de una lista)
+Fin
+Sino 
+    Inicio Q=PrimerNODO;
+        Mientras (Nodo != null)
+Inicio 
+            Q=Q
+Fin
+    Nodo nuevo = new Nodo (valor);
+        Nuevo.Nodo=Q.Nodo;
+                Q.Nodo= Nuevo
+    Fin
+Fin1
