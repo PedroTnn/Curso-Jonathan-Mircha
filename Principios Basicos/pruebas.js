@@ -7,7 +7,7 @@
     console.log("Dos")
 }
 estoEsUnaFunction();
-*/
+
 //
 
 
@@ -59,3 +59,31 @@ sumadora(5,3);
  
 
 //TERMINA NUCLEO FUNCIONES
+//EMPIEZA EL NUCLEO DE ARREGLOS(ARRAYS)
+
+const a = [];
+const b = [1,true,'Hola',[1,2,3]]
+console.log(a);
+console.log(b);
+console.log(b[0])
+console.log(b[3][1])
+const c = Array.of('Hola','Adios','Peludo');
+console.log(c);
+//Esta propiedad '.fill' rellena el array con el tipo de valor que quieras,
+//si es de 10 posiciones esta propiedad se encarga de rellenarlo con false
+const d = Array(100).fill(false);
+console.log(d);
+//Esta propiedad escanea un arreglo, un array o algo que necesites
+// encontrar segun su posicion  variable 1 recoje el elemento
+//variable 2 escanea la posicion
+b.forEach(
+    function(element,i){
+        console.log(`<li> '${i}' ${element} </li>`);
+    }
+);
+*/
+
+ // TERMINAN LOS ARRAYS
+ //EMPIEZAN LOS OBJETOS
+
+ 
