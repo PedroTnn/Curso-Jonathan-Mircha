@@ -1,0 +1,1 @@
+console.log('Instala otro navegador hueon')
