@@ -54,9 +54,18 @@ const sumadora = function(valorA ='Sin valor',valorB ='Sin valor'){
  let aux = ((valorA + valorB)*3) 
  console.log(aux);
 }
-
 sumadora(5,3);
- 
+
+
+
+const sumadora1 = function(a = undefined,b = undefined,
+    c = undefined){
+  let aux = ((a+b+c)*2)
+  return aux
+}
+
+console.log(sumadora1(1,1,1))
+
 
 //TERMINA NUCLEO FUNCIONES
 //EMPIEZA EL NUCLEO DE ARREGLOS(ARRAYS)
